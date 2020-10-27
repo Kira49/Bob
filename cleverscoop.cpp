@@ -19,16 +19,11 @@ int main()
         mx = max(mx, a[i]);
     }
     ll temp[100005]={0};
-      for(int i=0; i<n; i++)
+    for(int i=0; i<n; i++)
     {
         temp[a[i]]++;
     }
     ll ans = 0;
-    // for(int i=0; i<n; i++)
-    // {
-    //   cout << temp[a[i]] << " ";
-    // }
-    // cout << endl;
     ll a1 = 0, a2 = 0;
     for(ll i=1; i<=100003; i++)
     {
@@ -56,7 +51,6 @@ int main()
     }
 
     cout << ans << endl;
-    // cout << a2 << endl;
   }
   return 0;
 }
