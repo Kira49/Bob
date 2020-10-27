@@ -16,13 +16,10 @@ int main()
     for(int i=0; i<n; i++)
     {
       cin >> a[i];
-        mx = max(mx, a[i]);
+      mx = max(mx, a[i]);
+      temp[a[i]]++;
     }
     ll temp[100005]={0};
-    for(int i=0; i<n; i++)
-    {
-        temp[a[i]]++;
-    }
     ll ans = 0;
     ll a1 = 0, a2 = 0;
     for(ll i=1; i<=100003; i++)
@@ -39,17 +36,6 @@ int main()
             }
         }
     }
-    for(ll i=1; i<=100003; i++)
-    {
-        for(ll j=i; j<=100003; j+=i)
-        {
-            if(i!=j)
-            {
-              ans += temp[i]*temp[j];
-            }
-        }
-    }
-
     cout << ans << endl;
   }
   return 0;
