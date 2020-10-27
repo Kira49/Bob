@@ -2,6 +2,7 @@
 using namespace std;
 #define ll long long int
 #define endl "\n"
+#define N 100003
 int main()
 {
   ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
@@ -13,7 +14,7 @@ int main()
     cin >> n;
     ll a[n];
     ll mx=0;
-    ll temp[100005]={0};
+    ll temp[N+2]={0};
     for(int i=0; i<n; i++)
     {
       cin >> a[i];
@@ -22,9 +23,9 @@ int main()
     }
     ll ans = 0;
     ll a1 = 0, a2 = 0;
-    for(ll i=1; i<=100003; i++)
+    for(ll i=1; i<=N; i++)
     {
-        for(ll j=i; j<=100003; j+=i)
+        for(ll j=i; j<=N; j+=i)
         {
             if(i==j)
             {
